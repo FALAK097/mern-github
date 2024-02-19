@@ -1,14 +1,13 @@
 import { FaGithub } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-
 import { handleLoginWithGithub } from '../lib/function';
 
 const LoginPage = () => {
   return (
-    <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto h-screen lg:py-0">
-      <div className="w-full bg-glass rounded-lg shadow md:mt-0 sm:max-w-md xl:p-0">
+    <div className="flex flex-col items-center justify-center h-screen px-6 py-8 mx-auto lg:py-0">
+      <div className="w-full rounded-lg shadow bg-glass md:mt-0 sm:max-w-md xl:p-0">
         <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
-          <h1 className="text-xl font-bold  md:text-2xl text-center">
+          <h1 className="text-xl font-bold text-center md:text-2xl">
             Login to your account
           </h1>
           <button
@@ -24,7 +23,7 @@ const LoginPage = () => {
             {"Don't"} have an account?{' '}
             <Link
               to="/signup"
-              className="font-medium text-primary-600 hover:underline text-blue-600">
+              className="font-medium text-blue-600 text-primary-600 hover:underline">
               Sign Up
             </Link>
           </p>

@@ -15,26 +15,26 @@ const ProfileInfo = ({ userProfile }) => {
   const memberSince = formatMemberSince(userProfile?.created_at);
 
   return (
-    <div className="lg:w-1/3 w-full flex flex-col gap-2 lg:sticky md:top-10">
-      <div className="bg-glass rounded-lg p-4">
-        <div className="flex gap-3 items-center">
+    <div className="flex flex-col w-full gap-2 lg:w-1/3 lg:sticky md:top-10">
+      <div className="p-4 rounded-lg bg-glass">
+        <div className="flex items-center gap-3">
           {/* User Avatar */}
           <a href={userProfile?.html_url} target="_blank" rel="noreferrer">
             <img
               src={userProfile?.avatar_url}
-              className="rounded-md w-24 h-24 mb-2"
+              className="w-24 h-24 mb-2 rounded-md"
               alt=""
             />
           </a>
           {/* View on Github */}
 
-          <div className="flex gap-2 items-center flex-col">
+          <div className="flex flex-col items-center gap-2">
             <LikeProfile userProfile={userProfile} />
             <a
               href={userProfile?.html_url}
               target="_blank"
               rel="noreferrer"
-              className="bg-glass font-medium w-full text-xs p-2 rounded-md cursor-pointer border border-blue-400 flex items-center gap-2">
+              className="flex items-center w-full gap-2 p-2 text-xs font-medium border border-blue-400 rounded-md cursor-pointer bg-glass">
               <FaEye size={16} />
               View on Github
             </a>
@@ -71,14 +71,14 @@ const ProfileInfo = ({ userProfile }) => {
 
         {/* Member Since Date */}
         <div className="my-2">
-          <p className="text-gray-600 font-bold text-sm">Member since</p>
+          <p className="text-sm font-bold text-gray-600">Member since</p>
           <p className="">{memberSince}</p>
         </div>
 
         {/* Email Address */}
         {userProfile?.email && (
           <div className="my-2">
-            <p className="text-gray-600 font-bold text-sm">Email address</p>
+            <p className="text-sm font-bold text-gray-600">Email address</p>
             <p className="">{userProfile.email}</p>
           </div>
         )}
@@ -86,39 +86,39 @@ const ProfileInfo = ({ userProfile }) => {
         {/* Full Name */}
         {userProfile?.name && (
           <div className="my-2">
-            <p className="text-gray-600 font-bold text-sm">Full name</p>
+            <p className="text-sm font-bold text-gray-600">Full name</p>
             <p className="">{userProfile?.name}</p>
           </div>
         )}
 
         {/* Username */}
         <div className="my-2">
-          <p className="text-gray-600 font-bold text-sm">Username</p>
+          <p className="text-sm font-bold text-gray-600">Username</p>
           <p className="">{userProfile?.login}</p>
         </div>
       </div>
 
       <div className="flex flex-wrap gap-2 mx-4">
         {/* Followers Count */}
-        <div className="flex items-center gap-2 bg-glass rounded-lg p-2 flex-1 min-w-24">
+        <div className="flex items-center flex-1 gap-2 p-2 rounded-lg bg-glass min-w-24">
           <RiUserFollowFill className="w-5 h-5 text-blue-800" />
           <p className="text-xs">Followers: {userProfile?.followers}</p>
         </div>
 
         {/* Following count */}
-        <div className="flex items-center gap-2 bg-glass rounded-lg p-2 flex-1 min-w-24">
+        <div className="flex items-center flex-1 gap-2 p-2 rounded-lg bg-glass min-w-24">
           <RiUserFollowLine className="w-5 h-5 text-blue-800" />
           <p className="text-xs">Following: {userProfile?.following}</p>
         </div>
 
         {/* Number of public repos */}
-        <div className="flex items-center gap-2 bg-glass rounded-lg p-2 flex-1 min-w-24">
+        <div className="flex items-center flex-1 gap-2 p-2 rounded-lg bg-glass min-w-24">
           <RiGitRepositoryFill className="w-5 h-5 text-blue-800" />
           <p className="text-xs">Public repos: {userProfile?.public_repos}</p>
         </div>
 
         {/* Number of public gists */}
-        <div className="flex items-center gap-2 bg-glass rounded-lg p-2 flex-1 min-w-24">
+        <div className="flex items-center flex-1 gap-2 p-2 rounded-lg bg-glass min-w-24">
           <RiGitRepositoryFill className="w-5 h-5 text-blue-800" />
           <p className="text-xs">Public gists: {userProfile?.public_gists}</p>
         </div>

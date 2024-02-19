@@ -1,14 +1,13 @@
 import { FaGithub, FaUnlockAlt } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-
 import { handleLoginWithGithub } from '../lib/function';
 
 const SignUpPage = () => {
   return (
-    <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto h-screen lg:py-0">
+    <div className="flex flex-col items-center justify-center h-screen px-6 py-8 mx-auto lg:py-0">
       <div className="w-full rounded-lg shadow md:mt-0 sm:max-w-md xl:p-0 bg-glass">
         <div className="p-6 spacey-y-4 md:space-y-6 sm:p-8">
-          <h1 className="text-xl font-bold md:text-2xl text-center">
+          <h1 className="text-xl font-bold text-center md:text-2xl">
             Create Account
           </h1>
 
@@ -25,7 +24,7 @@ const SignUpPage = () => {
           <p className="text-gray-300">
             By signing up, you will unlock all the features of the app.
             <span>
-              <FaUnlockAlt className="w-4 h-4 inline mx-2" />
+              <FaUnlockAlt className="inline w-4 h-4 mx-2" />
             </span>
           </p>
 
@@ -33,7 +32,7 @@ const SignUpPage = () => {
             Already have an account?{' '}
             <Link
               to="/login"
-              className="font-medium text-primary-600 hover:underline text-blue-600">
+              className="font-medium text-blue-600 text-primary-600 hover:underline">
               Login
             </Link>
           </p>

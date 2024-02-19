@@ -5,7 +5,7 @@ const Repos = ({ repos, alwaysFullWidth = false }) => {
 
   return (
     <div className={`${className} bg-glass rounded-lg px-8 py-6`}>
-      <ol className="relative border-s border-gray-200">
+      <ol className="relative border-gray-200 border-s">
         {repos.map((repo) => (
           <Repo key={repo.id} repo={repo} />
         ))}

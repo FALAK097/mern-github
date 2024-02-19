@@ -1,7 +1,6 @@
 import { FaCodeBranch, FaCopy, FaRegStar } from 'react-icons/fa';
 import { FaCodeFork } from 'react-icons/fa6';
 import toast from 'react-hot-toast';
-
 import { formatDate } from '../utils/functions';
 import { PROGRAMMING_LANGUAGES } from '../utils/constants';
 
@@ -19,12 +18,10 @@ const Repo = ({ repo }) => {
 
   return (
     <li className="mb-10 ms-7">
-      <span
-        className="absolute flex items-center justify-center w-6 h-6 bg-blue-100
-    rounded-full -start-3 ring-8 ring-white">
+      <span className="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white">
         <FaCodeBranch className="w-5 h-5 text-blue-800" />
       </span>
-      <div className="flex gap-2 items-center flex-wrap">
+      <div className="flex flex-wrap items-center gap-2">
         <a
           href={repo.html_url}
           target="_blank"
@@ -50,9 +47,7 @@ const Repo = ({ repo }) => {
         </span>
       </div>
 
-      <time
-        className="block my-1 text-xs font-normal leading-none
-     text-gray-400">
+      <time className="block my-1 text-xs font-normal leading-none text-gray-400">
         Released on {formattedDate}
       </time>
       <p className="mb-4 text-base font-normal text-gray-500">

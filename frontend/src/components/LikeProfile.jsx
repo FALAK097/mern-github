@@ -1,6 +1,5 @@
 import { FaHeart } from 'react-icons/fa';
 import toast from 'react-hot-toast';
-
 import { useAuthContext } from '../context/AuthContext';
 
 const LikeProfile = ({ userProfile }) => {
@@ -10,13 +9,10 @@ const LikeProfile = ({ userProfile }) => {
 
   const handleLikeProfile = async () => {
     try {
-      const res = await fetch(
-        `http://localhost:5000/api/users/like/${userProfile.login}`,
-        {
-          method: 'POST',
-          credentials: 'include',
-        }
-      );
+      const res = await fetch(`/api/users/like/${userProfile.login}`, {
+        method: 'POST',
+        credentials: 'include',
+      });
       const data = await res.json();
 
       if (data.error) throw new Error(data.error);
@@ -30,7 +26,7 @@ const LikeProfile = ({ userProfile }) => {
 
   return (
     <button
-      className="p-2 text-xs w-full font-medium rounded-md bg-glass border border-blue-400 flex items-center gap-2"
+      className="flex items-center w-full gap-2 p-2 text-xs font-medium border border-blue-400 rounded-md bg-glass"
       onClick={handleLikeProfile}>
       <FaHeart size={16} /> Like Profile
     </button>

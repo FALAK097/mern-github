@@ -4,6 +4,7 @@ import { FaHeart } from 'react-icons/fa';
 import { MdOutlineExplore } from 'react-icons/md';
 import { PiSignInBold } from 'react-icons/pi';
 import { MdEditDocument } from 'react-icons/md';
+
 import Logout from './Logout';
 import { useAuthContext } from '../context/AuthContext';
 
@@ -11,10 +12,8 @@ const Sidebar = () => {
   const { authUser } = useAuthContext();
 
   return (
-    <aside
-      className="flex flex-col items-center min-w-12 sm:w-16 sticky top-0 left-0 h-screen py-8
-      overflow-y-auto border-r bg-glass">
-      <nav className="h-full flex flex-col gap-3">
+    <aside className="sticky top-0 left-0 flex flex-col items-center h-screen py-8 overflow-y-auto border-r min-w-12 sm:w-16 bg-glass">
+      <nav className="flex flex-col h-full gap-3">
         <Link to="/" className="flex justify-center">
           <img className="h-8" src="/github.svg" alt="Github Logo" />
         </Link>

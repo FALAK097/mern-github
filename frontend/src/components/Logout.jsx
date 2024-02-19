@@ -7,9 +7,7 @@ const Logout = () => {
 
   const handleLogout = async () => {
     try {
-      const res = await fetch('http://localhost:5000/api/auth/logout', {
-        credentials: 'include',
-      });
+      const res = await fetch('/api/auth/logout', { credentials: 'include' });
       const data = await res.json();
       console.log(data);
       setAuthUser(null);
@@ -22,11 +20,11 @@ const Logout = () => {
     <>
       <img
         src={authUser?.avatarUrl}
-        className="w-10 h-10 rounded-full border border-gray-800"
+        className="w-10 h-10 border border-gray-800 rounded-full"
       />
 
       <div
-        className="cursor-pointer flex items-center p-2 rounded-lg bg-glass mt-auto border border-gray-800"
+        className="flex items-center p-2 mt-auto border border-gray-800 rounded-lg cursor-pointer bg-glass"
         onClick={handleLogout}>
         <MdLogout size={22} />
       </div>

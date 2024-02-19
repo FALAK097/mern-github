@@ -6,7 +6,7 @@ const Search = ({ onSearch }) => {
 
   return (
     <form
-      className="max-w-xl mx-auto p-2"
+      className="max-w-xl p-2 mx-auto"
       onSubmit={(e) => onSearch(e, username)}>
       <label
         htmlFor="default-search"
@@ -14,13 +14,13 @@ const Search = ({ onSearch }) => {
         Search
       </label>
       <div className="relative">
-        <div className="absolute inset-y-0 start-0 flex items-center z-10 ps-3 pointer-events-none">
+        <div className="absolute inset-y-0 z-10 flex items-center pointer-events-none start-0 ps-3">
           <IoSearch className="w-5 h-5" />
         </div>
         <input
           type="search"
           id="default-search"
-          className="block w-full p-4 ps-10 text-sm rounded-lg bg-glass focus:ring-blue-500 focus:border-blue-500 bg-transparent focus:bg-transparent "
+          className="block w-full p-4 text-sm bg-transparent rounded-lg ps-10 bg-glass focus:ring-blue-500 focus:border-blue-500 focus:bg-transparent "
           placeholder="i.e. johndoe"
           required
           value={username}
