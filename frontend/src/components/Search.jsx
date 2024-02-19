@@ -21,7 +21,7 @@ const Search = ({ onSearch }) => {
           type="search"
           id="default-search"
           className="block w-full p-4 text-sm bg-transparent rounded-lg ps-10 bg-glass focus:ring-blue-500 focus:border-blue-500 focus:bg-transparent "
-          placeholder="i.e. johndoe"
+          placeholder="search for users"
           required
           value={username}
           onChange={(e) => setUsername(e.target.value)}
